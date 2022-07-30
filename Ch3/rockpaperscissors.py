@@ -15,5 +15,16 @@ user_choice = input("rock, paper or scissors? ")
 
 if computer_choice == user_choice:
     winner = "Tie"
+elif computer_choice == "paper" and user_choice == "rock":
+    winner = "Computer"
+elif computer_choice == "rock" and user_choice == "scissors":
+    winner = "Computer"
+elif computer_choice == "scissors" and user_choice == "paper":
+    winner = "Computer"
+else:
+    winner = "User"
 
-# I need to continue you
+if winner == "Tie":
+    print("We both chose", computer_choice, "play again")
+else:
+    print(winner, "won. The computer chose", computer_choice + ".")
